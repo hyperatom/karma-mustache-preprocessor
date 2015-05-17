@@ -1,0 +1,25 @@
+{
+  "name": "karma-mustache-preprocessor",
+  "version": "0.0.1",
+  "description": "A preprocessor for the Karma test runner that renders HTML templates using the Mustache middleware engine.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hyperatom/karma-mustache-preprocessor.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-preprocessor"
+  ],
+  "author": {
+    "name": "Adam Barrell"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Adam Barrell",
+      "email": "a.j.barrell@gmail.com"
+    }
+  ],
+  "readmeFilename": "README.md"
+}
