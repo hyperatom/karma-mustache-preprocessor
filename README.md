@@ -13,8 +13,8 @@ document object model.
 
 Add the following object to your Karma configuration file and modify to reflect your environment.
 
-If you have installed [connect-mustache-middleware](https://www.npmjs.com/package/connect-mustache-middleware) as an NPM
-module, you may set `mustacheModule` to `connect-mustache-middleware`. Otherwise, point it to the index file of the library.
+Ensure you point `mustacheModule` to the index file of the 
+[connect-mustache-middleware](https://www.npmjs.com/package/connect-mustache-middleware) package.
 
 ```javascript
 "preprocessors": {
