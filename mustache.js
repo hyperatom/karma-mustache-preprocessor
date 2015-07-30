@@ -2,7 +2,8 @@
 
 var mustacheRenderer = function(logger, opts) {
 
-    var mustache = require('../../' + opts.mustacheModule);
+    var mustache = require(opts.mustacheModule),
+        defaults = require(opts.defaultsModule);
 
     return function(content, file, done) {
 
@@ -10,6 +11,7 @@ var mustacheRenderer = function(logger, opts) {
             mustacheOpts = opts.mustacheOpts;
 
         mustache.setOptions(mustacheOpts);
+        mustache.setDefaults(defaults);
 
         mustache.setStaticData(channel);
         mustache.parseRequestHtml(content);
