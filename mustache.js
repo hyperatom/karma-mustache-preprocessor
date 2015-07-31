@@ -10,13 +10,15 @@ var mustacheRenderer = function(logger, opts) {
         var channel      = opts.channel || 'default',
             mustacheOpts = opts.mustacheOpts;
 
-        mustache.setOptions(mustacheOpts);
-        mustache.setDefaults(defaults);
+        try {
+            mustache.setOptions(mustacheOpts);
+            mustache.setDefaults(defaults);
 
-        mustache.setStaticData(channel);
-        mustache.parseRequestHtml(content);
-        mustache.includePartials();
-        mustache.compileTemplates();
+            mustache.setStaticData(channel);
+            mustache.parseRequestHtml(content);
+            mustache.includePartials();
+            mustache.compileTemplates();
+        } catch (e) {}
 
         done(mustache.replacePartials(content));
     };
