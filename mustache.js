@@ -13,12 +13,12 @@ var mustacheRenderer = function(logger, opts) {
         try {
             mustache.setOptions(mustacheOpts);
             mustache.setDefaults(defaults);
-
-            mustache.setStaticData(channel);
-            mustache.parseRequestHtml(content);
-            mustache.includePartials();
-            mustache.compileTemplates();
         } catch (e) {}
+
+        mustache.setStaticData(channel);
+        mustache.parseRequestHtml(content);
+        mustache.includePartials();
+        mustache.compileTemplates();
 
         done(mustache.replacePartials(content));
     };
