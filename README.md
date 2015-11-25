@@ -36,3 +36,5 @@ Ensure you point `mustacheModule` to the index file of the
   }
 }
 ```
+
+Testing Powered By [BrowserStack](https://www.browserstack.com/start)
